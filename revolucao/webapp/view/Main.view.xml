@@ -8,10 +8,24 @@
                 <Input/>
                 <Button text='Buscar' press='onPressBuscar'/>
 
-
             </FlexBox>
 
+            <List headerText='Lista de Resultados' id='idList' items='{ImageModel>/Images}'> 
+                <CustomListItem>
+                    <HBox>
+                        <Image src='{ImageModel>thumbnail}' widht='5em'/>
+                        <VBox>
+                            <Link text='{ImageModel>title}' href='{ImageModel>url}' target='_blank'/>
+                            <Label text='{ImageModel>provider/name}'/>
+                        </VBox>
+                    </HBox>
 
+
+                </CustomListItem>
+                
+                
+            </List>
+            
 
         </content>
     </Page>
